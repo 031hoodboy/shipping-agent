@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderBar from './HeaderBar';
 import ProfileImg from '../assets/profile.png';
+import NavBar from '../components/NavBar';
 
 const Header = () => {
     return (
@@ -12,13 +13,7 @@ const Header = () => {
                 <Logo></Logo>
                 <Name></Name>
             </LogoWrapper>
-            <Navigator>
-                <NavContent>요금안내</NavContent>
-                <NavContent>서비스</NavContent>
-                <NavContent>고객지원</NavContent>
-                <NavContent>견적문의</NavContent>
-                <NavContent>공지/이벤트</NavContent>
-            </Navigator>
+            <NavBar />
             <LoginWrapper>
                 <ProfileButton/>
                 <LoginButton>로그인</LoginButton>
@@ -57,6 +52,7 @@ const Logo = styled.div`
     height: 40px;
     background: #C6FFDD;
     border-radius: 20px;
+    background: linear-gradient(145deg, #242aeb, #9b24eb);
 `;
 
 const Name = styled.span`
@@ -64,20 +60,7 @@ const Name = styled.span`
     font-weight: 700;
 `;
 
-const Navigator = styled.div`
-    display: flex;
-    @media screen and (max-width: 1024px) {
-    display: none;
-  }
-`;
-
-const NavContent = styled.div`
-    padding: 0 15px;
-`;
-
 const LoginWrapper = styled.div`
-    width: 140px;
-    height: 40px;
     display: flex;
     align-items: center;
     @media screen and (max-width: 1024px) {
@@ -114,7 +97,7 @@ const LoginButton = styled.div`
     justify-content: center;
     align-items: center;
     background: #f9fafc;
-
+    cursor: pointer;
 `;
 
 const HamburgerWrapper = styled.div`
@@ -133,6 +116,5 @@ const Line = styled.div`
     border: 1px solid #000;
     width: 30px;
 `;
-
 
 export default Header;
