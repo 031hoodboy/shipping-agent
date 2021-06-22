@@ -11,7 +11,6 @@ const HeaderBar = () => {
 };
 
 const HeaderBarBlock = styled.div`
-    position: fixed;
     width: 100vw;
     height: 50px;
     background: linear-gradient(to left, #8E2DE2, #4A00E0);
@@ -21,10 +20,20 @@ const HeaderBarBlock = styled.div`
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-
+    @media screen and (max-width: 512px) {
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+  }
 `;
 
 const Content = styled.div`
+    display: flex;
+    @media screen and (max-width: 512px) {
+        width: 50vw;
+        font-size: 14px;
+        text-align: center;
+  }
 `;
 
 const Button = styled.div`

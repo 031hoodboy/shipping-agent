@@ -10,7 +10,7 @@ const Home = () => {
       <Header/>
       <HomeBlock>
         <Title>우리 배송대행지는 빠르고<br/> 정확하며 편리합니다.</Title>
-        <SubTitle>어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구<br/>어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구<br/>어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구</SubTitle>
+        <SubTitle>어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구어쩌구저쩌구</SubTitle>
         <ButtonWrapper>
           <RegisterButton>신청서 작성하기  ➞</RegisterButton>
           <SignupButton>회원가입</SignupButton>
@@ -25,12 +25,14 @@ const Home = () => {
 const HomeBlock = styled.div`
   width: 100vw;
   height: 90vh;
-  padding-top: 10vh;
   /* height: calc(100vh + 120px); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 512px) {
+    height: 80vh;
+  }
 `;
 
 const Title = styled.div`
@@ -38,13 +40,20 @@ const Title = styled.div`
   text-align: center;
   font-weight: 700;
   color: #342b40;
+  @media screen and (max-width: 512px) {
+    font-size: 34px;
+  }
 `;
 
 const SubTitle = styled.div`
-  margin-top: 30px;
+  margin-top: 10px;
   color: #4a5568;
   font-size: 20px;
   text-align: center;
+  width: 50vw;
+  @media screen and (max-width: 512px) {
+    width: 80vw;
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -53,6 +62,9 @@ const ButtonWrapper = styled.div`
   margin-top: 5vh;
   font-size: 22px;
   font-weight: 600;
+  @media screen and (max-width: 512px) {
+    flex-direction: column;
+  }
 `;
 
 const RegisterButton = styled.div`
@@ -65,6 +77,7 @@ const RegisterButton = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
 `;
 
 const SignupButton = styled.div`
@@ -81,6 +94,11 @@ const SignupButton = styled.div`
   cursor: pointer;
   &:hover{
     background: #f9fafc;
+  }
+  @media screen and (max-width: 512px) {
+    width: 80vw;
+    margin: 0;
+    margin-top: 20px;
   }
 `;
 

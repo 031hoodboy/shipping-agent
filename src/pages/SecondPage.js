@@ -10,7 +10,7 @@ const SecondPage = () => {
 const SecondPageBlock = styled.div`
     width: 100vw;
     height: 100vh;
-
+    background: #f9f9fa;
 `;
 
 export default SecondPage;

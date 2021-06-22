@@ -23,6 +23,11 @@ const Header = () => {
                 <ProfileButton/>
                 <LoginButton>로그인</LoginButton>
             </LoginWrapper>
+            <HamburgerWrapper>
+                <Line></Line>
+                <Line></Line>
+                <Line></Line>
+            </HamburgerWrapper>
         </HeaderBlock>
         </>
     );
@@ -31,14 +36,12 @@ const Header = () => {
 const HeaderBlock = styled.div`
     width: 95vw;
     height: 70px;
-        padding: 0 2.5vw;
-    position: fixed;
-    top: 50px;
-    left: -2.5vw;
+    padding: 0 2.5vw;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2.5vw;
     color: #4a5568;
     font-weight: 500;
     background: #fff;
@@ -63,6 +66,9 @@ const Name = styled.span`
 
 const Navigator = styled.div`
     display: flex;
+    @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const NavContent = styled.div`
@@ -74,6 +80,9 @@ const LoginWrapper = styled.div`
     height: 40px;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const ProfileButton = styled.div`
@@ -106,6 +115,23 @@ const LoginButton = styled.div`
     align-items: center;
     background: #f9fafc;
 
+`;
+
+const HamburgerWrapper = styled.div`
+    width: 28px;
+    height: 22px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    @media screen and (max-width: 1024px) {
+    display: flex;
+  }
+`;
+
+const Line = styled.div`
+    border: 1px solid #000;
+    width: 30px;
 `;
 
 
